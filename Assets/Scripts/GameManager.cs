@@ -19,7 +19,12 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gm = this;    
+        gm = this;
+        wordUnlocked = false;
+        doubleJumpUnlocked = false;
+        regenUnlocked = false;
+        dashUnlocked = false;
+        hugUnlocked = false;    
     }
 
     // Update is called once per frame

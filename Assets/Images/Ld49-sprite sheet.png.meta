@@ -1,0 +1,996 @@
+fileFormatVersion: 2
+guid: c3ea188e432a61243a175d99438f3768
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5417960183234185565
+    second: player_eye
+  - first:
+      213: -5722148113287762589
+    second: player_h_eye1
+  - first:
+      213: 8526377383600717854
+    second: player_h_eye2
+  - first:
+      213: 6119932183486736544
+    second: player_x_eye1
+  - first:
+      213: 7936675153089904113
+    second: player_x_eye2
+  - first:
+      213: 1315672441970906876
+    second: enemy_face2
+  - first:
+      213: 1875000988113053463
+    second: enemy_eye1
+  - first:
+      213: 7789653676081314188
+    second: enemy_eye1_1
+  - first:
+      213: 9200099226572766520
+    second: enemy_body1
+  - first:
+      213: -6168009324819609208
+    second: enemy_body2
+  - first:
+      213: -1300141264208160277
+    second: player_body
+  - first:
+      213: 2919374688460418739
+    second: player_arm
+  - first:
+      213: -5872203647359851072
+    second: boss_mouth1
+  - first:
+      213: 4223789563755364270
+    second: boss_eye1
+  - first:
+      213: 3483994916510774833
+    second: boss_eye2
+  - first:
+      213: -5906024242313653097
+    second: Ld49-sprite sheet_36
+  - first:
+      213: 354358193959608469
+    second: boss_mouth2
+  - first:
+      213: 4109879120410721131
+    second: fear
+  - first:
+      213: -1179041813402661117
+    second: boss_mouth3
+  - first:
+      213: -728156505688482425
+    second: hate
+  - first:
+      213: 371086276792820374
+    second: Ld49-sprite sheet_65
+  - first:
+      213: 3008172019221045769
+    second: spit
+  - first:
+      213: 66105389162166021
+    second: bad
+  - first:
+      213: 2671024654624637481
+    second: Ld49-sprite sheet_106
+  - first:
+      213: 668299047046053729
+    second: Ld49-sprite sheet_107
+  - first:
+      213: -1933918080133263515
+    second: love
+  - first:
+      213: 608318688358975822
+    second: Ld49-sprite sheet_116
+  - first:
+      213: -1422862522340472672
+    second: Ld49-sprite sheet_117
+  - first:
+      213: 2636119847345984749
+    second: Ld49-sprite sheet_124
+  - first:
+      213: 8416224687071699469
+    second: Ld49-sprite sheet_125
+  - first:
+      213: -7112479413503196880
+    second: Ld49-sprite sheet_126
+  - first:
+      213: -5283125716595182054
+    second: Ld49-sprite sheet_127
+  - first:
+      213: -8824738621801776023
+    second: Ld49-sprite sheet_128
+  - first:
+      213: -2529774450436784287
+    second: friend
+  - first:
+      213: -4019698205300768274
+    second: good
+  - first:
+      213: 7634762567839198508
+    second: enemy_face2_2
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: player_eye
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 1497
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6bd1f3be98fc4b0800000000000000
+      internalID: -5417960183234185565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_h_eye1
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1486
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36daf43bb98d690b0800000000000000
+      internalID: -5722148113287762589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_h_eye2
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 1498
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1002724e07c35670800000000000000
+      internalID: 8526377383600717854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_x_eye1
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 1494
+        width: 50
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a8253665ed5ee450800000000000000
+      internalID: 6119932183486736544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_x_eye2
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 1493
+        width: 48
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdb79d500cb42e60800000000000000
+      internalID: 7936675153089904113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_face2
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 1445
+        width: 132
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf652708d15324210800000000000000
+      internalID: 1315672441970906876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_eye1
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 1483
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7172cf9e677550a10800000000000000
+      internalID: 1875000988113053463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_eye1_1
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1479
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89742e3fb86a1c60800000000000000
+      internalID: 7789653676081314188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_body1
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 1150
+        width: 220
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d373a90815daf70800000000000000
+      internalID: 9200099226572766520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_body2
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 1128
+        width: 292
+        height: 295
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88984d6d234d66aa0800000000000000
+      internalID: -6168009324819609208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_body
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1062
+        width: 302
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be99b0d9868f4fde0800000000000000
+      internalID: -1300141264208160277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_arm
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1075
+        width: 135
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be23f7cfc3b38820800000000000000
+      internalID: 2919374688460418739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_mouth1
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 972
+        width: 144
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5ec5e15edb18ea0800000000000000
+      internalID: -5872203647359851072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_eye1
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 864
+        width: 219
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaff3a9ca3aed9a30800000000000000
+      internalID: 4223789563755364270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_eye2
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 865
+        width: 259
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13634e5eae2a95030800000000000000
+      internalID: 3483994916510774833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ld49-sprite sheet_36
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 844
+        width: 115
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7949c0a3e36990ea0800000000000000
+      internalID: -5906024242313653097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_mouth2
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 725
+        width: 327
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 590263266eeeae400800000000000000
+      internalID: 354358193959608469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fear
+      rect:
+        serializedVersion: 2
+        x: 1969
+        y: 733
+        width: 231
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b30e1f849390930800000000000000
+      internalID: 4109879120410721131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_mouth3
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 466
+        width: 258
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f4dc0b7b333afe0800000000000000
+      internalID: -1179041813402661117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hate
+      rect:
+        serializedVersion: 2
+        x: 1986
+        y: 621
+        width: 232
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d5c89148115e5f0800000000000000
+      internalID: -728156505688482425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ld49-sprite sheet_65
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 371
+        width: 259
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692224da00d562500800000000000000
+      internalID: 371086276792820374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spit
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 564
+        width: 155
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902a0f4738c2fb920800000000000000
+      internalID: 3008172019221045769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bad
+      rect:
+        serializedVersion: 2
+        x: 1990
+        y: 512
+        width: 184
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507ffbe408adae000800000000000000
+      internalID: 66105389162166021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ld49-sprite sheet_106
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 187
+        width: 112
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922463d85c2611520800000000000000
+      internalID: 2671024654624637481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ld49-sprite sheet_107
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 200
+        width: 48
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f79e64176464900800000000000000
+      internalID: 668299047046053729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: love
+      rect:
+        serializedVersion: 2
+        x: 1958
+        y: 347
+        width: 263
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f83f0a0c75925e0800000000000000
+      internalID: -1933918080133263515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ld49-sprite sheet_116
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 237
+        width: 110
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e494ed1cf9e217800800000000000000
+      internalID: 608318688358975822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ld49-sprite sheet_117
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 198
+        width: 160
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a80ea7131af04ce0800000000000000
+      internalID: -1422862522340472672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ld49-sprite sheet_124
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 25
+        width: 408
+        height: 284
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de41a6ec801659420800000000000000
+      internalID: 2636119847345984749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ld49-sprite sheet_125
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 226
+        width: 128
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0228c603cf6cc470800000000000000
+      internalID: 8416224687071699469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ld49-sprite sheet_126
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 221
+        width: 93
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0310ddd28a56b4d90800000000000000
+      internalID: -7112479413503196880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ld49-sprite sheet_127
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 235
+        width: 94
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16fc96e6219ea6b0800000000000000
+      internalID: -5283125716595182054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ld49-sprite sheet_128
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 223
+        width: 106
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96cb5db9afa388580800000000000000
+      internalID: -8824738621801776023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: friend
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 175
+        width: 354
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f3bd76a8f64ecd0800000000000000
+      internalID: -2529774450436784287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good
+      rect:
+        serializedVersion: 2
+        x: 1958
+        y: 54
+        width: 278
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1c5c097c92738c0800000000000000
+      internalID: -4019698205300768274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_face2_2
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 1476
+        width: 67
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d2180da1024f960800000000000000
+      internalID: 7634762567839198508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 598519330e6883c459b094f7088c909d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

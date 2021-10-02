@@ -19,6 +19,8 @@ public class CharacterController : MonoBehaviour
 
     public float movementBase = 5f;
     public float jumpBase = 10f;
+    public float dashForce = 50f;
+    public float deaccel = 5f;
     private Vector2 moveSpeed;
 
     private bool isAttacking;
@@ -60,23 +62,40 @@ public class CharacterController : MonoBehaviour
     {
         //MOVE
         if(Input.GetKey(KeyCode.A)){
-            moveSpeed.x = -movementBase;
+            //moveSpeed.x = -movementBase;
+            rb.AddForce(Vector2.left * movementBase);
             updateFacing("left");
         } else if(Input.GetKey(KeyCode.D)){
-            moveSpeed.x = movementBase;
+            //moveSpeed.x = movementBase;
+            rb.AddForce(Vector2.right * movementBase);
             updateFacing("right");
         } else{
-            moveSpeed.x = 0;
+            //moveSpeed.x = rb.velocity.x;
         }
 
-        if(Input.GetKey(KeyCode.Space) && isGrounded){
-            moveSpeed.y = jumpBase;
-        }else{
-            moveSpeed.y = rb.velocity.y;
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
+            //moveSpeed.y = jumpBase;
+            rb.AddForce(Vector2.up * jumpBase);
+        } else{
+            //moveSpeed.y = rb.velocity.y;
         }
 
         //ATTACK
+        if(Input.GetKeyDown(KeyCode.Z) && !isAttacking){
+            TriggerAnimation("word_attack");
+        } else if (Input.GetKeyDown(KeyCode.X) && !isAttacking){
+            TriggerAnimation("hug_attack");
+        }
 
+        if(Input.GetKeyDown(KeyCode.LeftShift)){
+            if(isFacing == "right"){
+                rb.AddForce(Vector2.right * dashForce);
+            }else{
+                rb.AddForce(Vector2.left * dashForce);
+            }
+            
+
+        }
     }
 
     public void DisplayPositiveWord(){
@@ -96,10 +115,10 @@ public class CharacterController : MonoBehaviour
 
     public void TriggerAnimation(string item){
         anim.SetTrigger(item);
+        isAttacking = true;
     }
 
     void Movement(){
-        rb.velocity = moveSpeed;
-
+        //rb.velocity = new Vector3(rb.velocity.x -);
     }
 }

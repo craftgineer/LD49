@@ -40,14 +40,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7510525359588188879}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d455386696b76e44bb7a24b9d3100939, type: 3}
+  m_Script: {fileID: 11500000, guid: 21c523a4e223fda4c9f3103f8f82d1e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicAssets: {fileID: 11400000, guid: ac76b640f66502348808385309a816b9, type: 2}
-  soundAssets: {fileID: 11400000, guid: dbeda1baa1a4bb54d8c066c73f6b5711, type: 2}
-  audioSourcePrefab: {fileID: 258321149639733833, guid: 6791ee4258bddae44b886209f3baa8d7, type: 3}
-  audioSourcePoolPrefab: {fileID: 4327007664545588530, guid: a3153b111e4c41b41a640b9b89388911, type: 3}
+  musicAssets: {fileID: 0}
+  soundAssets: {fileID: 0}
+  audioSourcePrefab: {fileID: 0}
+  audioSourcePoolPrefab: {fileID: 0}
   soundSourcePoolSize: 5
-  masterVolumeController: {fileID: 11400000, guid: a3d66008e4fe9944fba239371ce50cbf, type: 2}
-  musicVolumeController: {fileID: 11400000, guid: f0c6aaa324f3d844a95f14507b4460d7, type: 2}
-  soundEffectsVolumeController: {fileID: 11400000, guid: 768e597f50760bf4d8ff889e2ec26065, type: 2}
+  masterVolumeController: {fileID: 0}
+  musicVolumeController: {fileID: 0}
+  soundEffectsVolumeController: {fileID: 0}
