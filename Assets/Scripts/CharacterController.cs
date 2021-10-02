@@ -24,11 +24,13 @@ public class CharacterController : MonoBehaviour
     private Vector2 moveSpeed;
 
     private bool isAttacking;
+    private bool hasDoubleJumped;
     
     // Start is called before the first frame update
     void Start()
     {
         isGrounded = false;
+        hasDoubleJumped = false;
         isFacing = "right";
         curScale = gameObject.transform.localScale;
         rb = GetComponent<Rigidbody2D>();
@@ -47,6 +49,9 @@ public class CharacterController : MonoBehaviour
 
     void GroundCheck(){
         isGrounded = Physics2D.IsTouchingLayers(groundCheckCollider, isGround);
+        if(isGrounded){
+            hasDoubleJumped = false;
+        }
     }
 
     void updateFacing(string current){
@@ -73,11 +78,12 @@ public class CharacterController : MonoBehaviour
             //moveSpeed.x = rb.velocity.x;
         }
 
+        //JUMP
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
-            //moveSpeed.y = jumpBase;
             rb.AddForce(Vector2.up * jumpBase);
-        } else{
-            //moveSpeed.y = rb.velocity.y;
+        } else if(Input.GetKeyDown(KeyCode.Space) && !isGrounded && !hasDoubleJumped){
+            rb.AddForce(Vector2.up * jumpBase);
+            hasDoubleJumped = true;
         }
 
         //ATTACK
