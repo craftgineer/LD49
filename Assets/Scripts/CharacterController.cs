@@ -20,6 +20,8 @@ public class CharacterController : MonoBehaviour
     public float movementBase = 5f;
     public float jumpBase = 10f;
     private Vector2 moveSpeed;
+
+    private bool isAttacking;
     
     // Start is called before the first frame update
     void Start()
@@ -72,6 +74,9 @@ public class CharacterController : MonoBehaviour
         }else{
             moveSpeed.y = rb.velocity.y;
         }
+
+        //ATTACK
+
     }
 
     public void DisplayPositiveWord(){
@@ -83,6 +88,14 @@ public class CharacterController : MonoBehaviour
         foreach(GameObject word in positiveWords){
             word.SetActive(false);
         }
+    }
+
+    public void DoneAttacking(){
+        isAttacking = false;
+    }
+
+    public void TriggerAnimation(string item){
+        anim.SetTrigger(item);
     }
 
     void Movement(){
