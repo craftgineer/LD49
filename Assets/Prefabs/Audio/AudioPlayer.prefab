@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7510525359588188877}
   - component: {fileID: 7510525359588188876}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: AudioPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,11 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c523a4e223fda4c9f3103f8f82d1e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicAssets: {fileID: 0}
-  soundAssets: {fileID: 0}
-  audioSourcePrefab: {fileID: 0}
-  audioSourcePoolPrefab: {fileID: 0}
+  musicAssets: {fileID: 11400000, guid: 3a4625124f8685344ba65e788a4f0206, type: 2}
+  soundAssets: {fileID: 11400000, guid: d54a8f22ce16a2743853f20d69c6e4ff, type: 2}
+  audioSourcePrefab: {fileID: 258321149639733833, guid: e6c6c39a1131efd4096428d78bd7ff2f, type: 3}
+  audioSourcePoolPrefab: {fileID: 4327007664545588530, guid: 0b85a2f4bb156ea43868ab784af5b792, type: 3}
   soundSourcePoolSize: 5
-  masterVolumeController: {fileID: 0}
-  musicVolumeController: {fileID: 0}
-  soundEffectsVolumeController: {fileID: 0}
+  masterVolumeController: {fileID: 11400000, guid: ebfc299e70104404eb0f478ef6da5c34, type: 2}
+  musicVolumeController: {fileID: 11400000, guid: fe57b8416d5552e4bae4beb9240709c7, type: 2}
+  soundEffectsVolumeController: {fileID: 11400000, guid: 9d16b7592a03c6f4d82ac7c53aac4724, type: 2}
