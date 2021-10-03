@@ -8,7 +8,7 @@ public class CharacterController : MonoBehaviour
     // components
     private Rigidbody2D rb;
     private CapsuleCollider2D cr;
-    public CircleCollider2D groundCheckCollider;
+    public Collider2D groundCheckCollider;
     public LayerMask isGround;
     private Animator anim;
 
@@ -17,11 +17,15 @@ public class CharacterController : MonoBehaviour
     private Vector3 curScale;
 
     public GameObject[] positiveWords;
+    public GameObject itemHeld;
+    public GameObject hugObject;
+    public GameObject wordObject;
 
     public float movementBase = 5f;
     public float jumpBase = 10f;
     public float dashForce = 50f;
-    public float deaccel = 5f;
+    public float pickupTime;
+    
 
     public float health;
     public float maxHealth;
@@ -37,10 +41,15 @@ public class CharacterController : MonoBehaviour
 
     public bool isDead;
     
+    void Awake(){
+        player = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        player = this;
+        wordObject.SetActive(false);
+        hugObject.SetActive(false);
         isGrounded = false;
         hasDoubleJumped = false;
         isFacing = "right";
@@ -53,7 +62,9 @@ public class CharacterController : MonoBehaviour
         doubleJumpUnlocked = false;
         regenUnlocked = false;
         dashUnlocked = false;
-        hugUnlocked = false;  
+        hugUnlocked = false;
+
+        pickupTime = Time.time;  
     }
 
     // Update is called once per frame
@@ -118,6 +129,11 @@ public class CharacterController : MonoBehaviour
                 rb.AddForce(Vector2.left * dashForce);
             }
         }
+
+        //ITEM
+        if(itemHeld != null && Input.GetKey(KeyCode.E)){
+            DropItem();
+        }
     }
 
     public void DisplayPositiveWord(){
@@ -144,6 +160,22 @@ public class CharacterController : MonoBehaviour
         health -= value;
         if(health <= 0){
             //TODO: dead
+        }
+    }
+
+    public void HoldItem(GameObject item){
+        if(Time.time - pickupTime > 1f){
+            item.transform.parent = this.transform;
+            itemHeld = item;
+            pickupTime = Time.time;
+        }
+    }
+
+    private void DropItem(){
+        if(Time.time - pickupTime > 1f){
+            itemHeld.transform.parent = null;
+            itemHeld = null;
+            pickupTime = Time.time;
         }
     }
 
