@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7510525359588188877}
   - component: {fileID: 7510525359588188876}
+  - component: {fileID: 6877733419197280298}
   m_Layer: 0
   m_Name: AudioPlayer
   m_TagString: Untagged
@@ -51,3 +52,19 @@ MonoBehaviour:
   masterVolumeController: {fileID: 11400000, guid: ebfc299e70104404eb0f478ef6da5c34, type: 2}
   musicVolumeController: {fileID: 11400000, guid: fe57b8416d5552e4bae4beb9240709c7, type: 2}
   soundEffectsVolumeController: {fileID: 11400000, guid: 9d16b7592a03c6f4d82ac7c53aac4724, type: 2}
+--- !u!114 &6877733419197280298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7510525359588188879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d567ac3f83ca5424d8fed3501a7ded49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerCondition: 1
+  musicAsset: {fileID: 11400000, guid: 9e4711f0edf689f40a2eaa381486a0f1, type: 2}
+  musicOptions:
+    rewindSameAsset: 0

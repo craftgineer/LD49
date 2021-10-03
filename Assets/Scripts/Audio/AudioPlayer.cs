@@ -27,7 +27,6 @@ public class AudioPlayer : MonoBehaviour
 	public static AudioPlayer Instance;
 
 
-
 	// Reference to the audio source for music
 	private AudioSource musicSource = null;
 
