@@ -222,6 +222,8 @@ public class CharacterController : MonoBehaviour
     }
 
     public void UnlockAbility(int npcNumber){
+        AudioPlayer.Instance.PlaySoundByName("Regenerate", null);
+
         switch(npcNumber){
             case 1:
                 wordUnlocked = true;
