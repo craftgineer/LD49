@@ -26,7 +26,6 @@ public class Enemy : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D coll){
-        Debug.Log(coll.transform.tag);
         if(coll.transform.tag == "Player"){
             Debug.Log("Enemy hit player");
             CharacterController.player.TakeDamage(25);
@@ -35,7 +34,6 @@ public class Enemy : MonoBehaviour
     }
 
     void OnCollisionStay2D(Collision2D coll){
-        Debug.Log(coll.transform.name);
         if(coll.transform.tag == "Player" && ((Time.time - lastHit) > hitDelay)){
             Debug.Log("Enemy hit player again");
             CharacterController.player.TakeDamage(25);

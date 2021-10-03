@@ -12,13 +12,22 @@ public class GameManager : MonoBehaviour
     public Lock LockFour;
     public Lock LockFive;
 
+    public Sprite DoorSprite;
+    public GameObject BossDoorOpen;
+    public SpriteRenderer doorSR;
+
     private int unlockedCount;
+    private bool musicPhase2Triggered;
+    private bool musicPhase3Triggered;
 
     // Start is called before the first frame update
     void Start()
     {
         gm = this;
         unlockedCount = 0;
+        musicPhase2Triggered = false;
+        musicPhase3Triggered = false;
+        BossDoorOpen.SetActive(false);
     }
 
     public void CrystalBroken(int num){
@@ -47,9 +56,19 @@ public class GameManager : MonoBehaviour
         if(unlockedCount >= 5){
             UnlockBossDoor();
         }
+        if(!musicPhase2Triggered && unlockedCount == 1){
+            AudioPlayer.Instance.PlayMusicByName("Wandering/2", null);
+            musicPhase2Triggered = true;
+        }
+        if(!musicPhase3Triggered && unlockedCount == 3){
+            AudioPlayer.Instance.PlayMusicByName("Wandering/3", null);
+            musicPhase3Triggered = true;
+        }
+
     }
 
     void UnlockBossDoor(){
-        //TODO
+        BossDoorOpen.SetActive(true);
+        doorSR.sprite = DoorSprite;
     }
 }
