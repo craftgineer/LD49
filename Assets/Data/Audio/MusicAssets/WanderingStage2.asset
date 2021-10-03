@@ -19,7 +19,7 @@ MonoBehaviour:
     relativePitch: 1
     loop: 0
   loopTrack:
-    clip: {fileID: 8300000, guid: 9d97d7e6f80525d4da1ea8c7b0e833f1, type: 3}
+    clip: {fileID: 8300000, guid: 3ab210f9ed1999f4a89f1cd375c9b40c, type: 3}
     mixerGroup: {fileID: -2420445514113210293, guid: f906c8e532c217e448cfce9d5f84ce83, type: 2}
     relativeVolume: 1
     relativePitch: 1
