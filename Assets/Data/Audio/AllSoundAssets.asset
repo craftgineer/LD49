@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: AllSoundAssets
   m_EditorClassIdentifier: 
   entries:
+  - asset: {fileID: 11400000, guid: 5478784ccba1ea74fb85dfa0fd8799b4, type: 2}
+    assetAlias: 
+  - asset: {fileID: 11400000, guid: 1d6fe7ee3ae9c48498a290c58a43d648, type: 2}
+    assetAlias: 
   - asset: {fileID: 11400000, guid: 1b2d0a595e2f4604ebb2ddf0e83aec51, type: 2}
     assetAlias: 
   - asset: {fileID: 11400000, guid: 93baa2d5fc159e047a6a05d85291929a, type: 2}
