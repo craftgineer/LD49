@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6ecfe1762c3b64998d9aa08b7ccac0, type: 3}
   m_Name: AllMusicAssets
   m_EditorClassIdentifier: 
-  entries: []
+  entries:
+  - asset: {fileID: 11400000, guid: 9e4711f0edf689f40a2eaa381486a0f1, type: 2}
+    assetAlias: Wandering/1
+  - asset: {fileID: 11400000, guid: 193dd3d36147cc84b8ddf1fea1077fd8, type: 2}
+    assetAlias: Wandering/2
+  - asset: {fileID: 11400000, guid: d984ac617c6bf7d48bcca57d4dd0bc88, type: 2}
+    assetAlias: Wandering/3

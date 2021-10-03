@@ -1,5 +1,38 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-3772523353996047709
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 498ed2cf625246a4fad1b083eebcb0da
+  m_EffectName: Attenuation
+  m_MixLevel: fdeee29f5f1e8f84283a720fbb006bd9
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!243 &-2420445514113210293
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Wandering
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 251fb21b4e75ab04aa19a5a38e876dee
+  m_Children: []
+  m_Volume: 467ed558ece7a1145bf5778b29e111c3
+  m_Pitch: 215093d6e126f624189194ad8a078d2a
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -3772523353996047709}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &-2048898795062457226
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -60,6 +93,7 @@ AudioMixerController:
     - 35799ab3b6e2f83478f9aba1a86d9833
     - 3415fb31310157c4d97da1bd8a8e48da
     - 2e7d4547012d539449cc6777ef34e0a3
+    - 251fb21b4e75ab04aa19a5a38e876dee
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -118,7 +152,8 @@ AudioMixerGroupController:
   m_Name: Music
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 3415fb31310157c4d97da1bd8a8e48da
-  m_Children: []
+  m_Children:
+  - {fileID: -2420445514113210293}
   m_Volume: 7b822db4bce683e449bac33cd6defe61
   m_Pitch: 42f8ae8eb96fef24da4f24e2888f56d3
   m_Send: 00000000000000000000000000000000
