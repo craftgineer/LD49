@@ -182,6 +182,8 @@ public class CharacterController : MonoBehaviour
             item.transform.parent = this.transform;
             itemHeld = item;
             pickupTime = Time.time;
+
+            AudioPlayer.Instance.PlaySoundByName("Confirm", null);
         }
     }
 
@@ -190,6 +192,8 @@ public class CharacterController : MonoBehaviour
             itemHeld.transform.parent = null;
             itemHeld = null;
             pickupTime = Time.time;
+
+            AudioPlayer.Instance.PlaySoundByName("Cancel", null);
         }
     }
 
