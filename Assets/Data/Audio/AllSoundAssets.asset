@@ -12,4 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6044268c28d557442aeb39a6293f253d, type: 3}
   m_Name: AllSoundAssets
   m_EditorClassIdentifier: 
-  entries: []
+  entries:
+  - asset: {fileID: 11400000, guid: 1b2d0a595e2f4604ebb2ddf0e83aec51, type: 2}
+    assetAlias: 
+  - asset: {fileID: 11400000, guid: 93baa2d5fc159e047a6a05d85291929a, type: 2}
+    assetAlias: 
+  - asset: {fileID: 11400000, guid: 32df1ac60f09afd47b0bb162ab14b8fe, type: 2}
+    assetAlias: 
+  - asset: {fileID: 11400000, guid: c63bbf7fecde1b14a90a6356da4997a9, type: 2}
+    assetAlias: 
+  - asset: {fileID: 11400000, guid: c68c3e6315a60754e8a4217df14abd55, type: 2}
+    assetAlias: 
+  - asset: {fileID: 11400000, guid: 78664ce0cbef9b4498a4577ca16fe89d, type: 2}
+    assetAlias: 
+  - asset: {fileID: 11400000, guid: 55d75a89a8fec4c4b96f8d86af4941be, type: 2}
+    assetAlias: 
+  - asset: {fileID: 11400000, guid: 0e0b0d0b9caea6f44bfb10ee2ae728f3, type: 2}
+    assetAlias: 
