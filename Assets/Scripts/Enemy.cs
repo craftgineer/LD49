@@ -4,12 +4,26 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public GameObject[] waypoints;
     public bool weakToHug;
     public bool weakToWord;
 
+    public bool canMove;
+    public float moveSpeed;
+    public bool facingRight;
+	public Transform currentPoint;
+    public Transform[] points;
+    private int pointSelection;
+
     private float hitDelay = 1f;
     private float lastHit;
+
+    void Start(){
+        facingRight = false;
+        if(canMove){
+            pointSelection = 0;
+		    currentPoint = points[pointSelection];
+        }       
+    }
 
     void OnCollisionEnter2D(Collision2D coll){
         Debug.Log(coll.transform.tag);
@@ -38,4 +52,33 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void Flip(){
+		facingRight = !facingRight;
+		Vector3 theScale = gameObject.transform.localScale;
+		theScale.x *= -1;
+		gameObject.transform.localScale = theScale;
+	}
+
+    // Update is called once per frame
+	void FixedUpdate () {
+        if(canMove){
+            gameObject.transform.position = Vector3.MoveTowards (gameObject.transform.position, currentPoint.position, Time.deltaTime * moveSpeed);
+
+            float distance = Vector3.Distance(transform.position, currentPoint.position);
+            if (distance <= moveSpeed) {
+                pointSelection++;
+                if (pointSelection == points.Length) {
+                    pointSelection = 0;
+                }
+
+                currentPoint = points [pointSelection];
+            }
+            if (gameObject.transform.position.x < currentPoint.position.x && !facingRight) {
+                Flip ();
+            } else if (gameObject.transform.position.x > currentPoint.position.x && facingRight){
+                Flip ();
+            }
+        }		
+	}
 }
