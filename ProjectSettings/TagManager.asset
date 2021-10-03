@@ -9,6 +9,13 @@ TagManager:
   - Bad
   - Hug
   - Word
+  - Hate
+  - Love
+  - Friend
+  - Fear
+  - Calm
+  - Ugly
+  - Pretty
   layers:
   - Default
   - TransparentFX

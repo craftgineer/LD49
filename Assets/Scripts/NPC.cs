@@ -9,11 +9,15 @@ public class NPC : MonoBehaviour
     public GameObject sadFace;
     public GameObject happyFace;
     public GameObject happyMessage;
+    public int npcNumber;
+
+    public string goodWord;
+    public string badWord;
     // Start is called before the first frame update
     void Start()
     {
         badInRange = true;
-        if(CharacterController.player.wordUnlocked){
+        if(CharacterController.player.CheckAbility(npcNumber)){
             IsHappy();
         }else{
             happyMessage.SetActive(false);
@@ -25,16 +29,16 @@ public class NPC : MonoBehaviour
     // maybe switch to Physics.OverlapSphere(https://docs.unity3d.com/ScriptReference/Physics.OverlapSphere.html)
     void OnTriggerStay2D(Collider2D coll){
         if(!isHappy){
-            if(coll.transform.tag == "Bad"){
+            if(coll.transform.tag == badWord){
                 badInRange = true;
-            } else if(coll.transform.tag == "Good" && !badInRange){
+            } else if(coll.transform.tag == goodWord && !badInRange){
                 IsHappy();
             }
         }
     }
 
     void OnTriggerExit2D(Collider2D coll){
-        if(coll.transform.tag == "Bad"){
+        if(coll.transform.tag == badWord){
             badInRange = false;
         }
     }
@@ -44,7 +48,7 @@ public class NPC : MonoBehaviour
         happyMessage.SetActive(true);
         sadFace.SetActive(false);
         happyFace.SetActive(true);
-        CharacterController.player.wordUnlocked = true;
+        CharacterController.player.UnlockAbility(npcNumber);
         //TODO: prompt player with word attack button
     }
 

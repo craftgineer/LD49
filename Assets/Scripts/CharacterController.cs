@@ -184,4 +184,46 @@ public class CharacterController : MonoBehaviour
             health += 1;
         }
     }
+
+    public bool CheckAbility(int npcNumber){
+        bool answer = false;
+        switch(npcNumber){
+            case 1:
+                answer = wordUnlocked;
+                break;
+            case 2:
+                answer = doubleJumpUnlocked;
+                break;
+            case 3:
+                answer = hugUnlocked;
+                break;
+            case 4:
+                answer = dashUnlocked;
+                break;
+            case 5:
+                answer = regenUnlocked;
+                break;
+        }
+        return answer;
+    }
+
+    public void UnlockAbility(int npcNumber){
+        switch(npcNumber){
+            case 1:
+                wordUnlocked = true;
+                break;
+            case 2:
+                doubleJumpUnlocked = true;
+                break;
+            case 3:
+                hugUnlocked = true;
+                break;
+            case 4:
+                dashUnlocked = true;
+                break;
+            case 5:
+                regenUnlocked = true;
+                break;
+        }
+    }
 }
