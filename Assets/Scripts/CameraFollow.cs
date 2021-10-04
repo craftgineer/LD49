@@ -10,13 +10,7 @@ public class CameraFollow : MonoBehaviour
 
 	void Awake()
 	{
-		if (camera == null) {
-			DontDestroyOnLoad (gameObject);
-			camera = this;
-		} else if(camera != this)
-		{
-			Destroy (gameObject);
-		}
+		camera = this;
 	}
 
 	void Update()

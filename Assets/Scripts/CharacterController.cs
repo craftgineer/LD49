@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class CharacterController : MonoBehaviour
     private string isFacing;
     private Vector3 curScale;
 
+    public Transform spawnPoint;
     public GameObject[] positiveWords;
     public GameObject itemHeld;
     public GameObject hugObject;
@@ -38,6 +40,8 @@ public class CharacterController : MonoBehaviour
     public bool regenUnlocked;
     public bool dashUnlocked;
     public bool hugUnlocked;
+
+    public Image healthbar;
 
     public bool isDead;
     
@@ -70,14 +74,23 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GroundCheck();
-        PlayerInput();
+        if(!isDead){
+            GroundCheck();
+            PlayerInput();
+        }     
     }
 
     void LateUpdate(){
         if(regenUnlocked && !isDead){
             Regenerate();
         }
+    }
+
+    public void Respawn(){
+        transform.position = spawnPoint.position;
+        health = maxHealth;
+        UpdateHealthBar();
+        isDead = false;
     }
 
     void GroundCheck(){
@@ -167,14 +180,18 @@ public class CharacterController : MonoBehaviour
     }
 
     public void TakeDamage(int value){
-        health -= value;
-        if(health <= 0){
-            //TODO: dead
-            AudioPlayer.Instance.PlaySoundByName("Death", null);
+        if(!isDead){
+            health -= value;
+            UpdateHealthBar();
+            if(health <= 0){
+                isDead = true;
+                GameManager.gm.ToggleDeadMenu();
+                AudioPlayer.Instance.PlaySoundByName("Death", null);
+            } else{
+                AudioPlayer.Instance.PlaySoundByName("Hit", null);
+            }
         }
-        else {
-            AudioPlayer.Instance.PlaySoundByName("Hit", null);
-        }
+        
     }
 
     public void HoldItem(GameObject item){
@@ -199,7 +216,8 @@ public class CharacterController : MonoBehaviour
 
     public void Regenerate(){
         if(health < 100){
-            health += 1;
+            health += 1 * Time.deltaTime;
+            UpdateHealthBar();
         }
     }
 
@@ -208,42 +226,56 @@ public class CharacterController : MonoBehaviour
         switch(npcNumber){
             case 1:
                 answer = wordUnlocked;
+                PlayerPrefs.SetInt("npc1_helped", 1);
                 break;
             case 2:
                 answer = doubleJumpUnlocked;
+                PlayerPrefs.SetInt("npc2_helped", 1);
                 break;
             case 3:
                 answer = hugUnlocked;
+                PlayerPrefs.SetInt("npc3_helped", 1);
                 break;
             case 4:
                 answer = dashUnlocked;
+                PlayerPrefs.SetInt("npc4_helped", 1);
                 break;
             case 5:
                 answer = regenUnlocked;
+                PlayerPrefs.SetInt("npc5_helped", 1);
                 break;
         }
         return answer;
     }
 
     public void UnlockAbility(int npcNumber){
-        AudioPlayer.Instance.PlaySoundByName("Regenerate", null);
-
+        string info = "";
         switch(npcNumber){
             case 1:
                 wordUnlocked = true;
+                info = "Nice Word Unlocked! You can now press 'Z' to say a positive word which may banish creatures of negativity!";
                 break;
             case 2:
                 doubleJumpUnlocked = true;
+                info = "Double Jump Unlocked! Your new friend taught you how to jump an extra time in the air!";
                 break;
             case 3:
                 hugUnlocked = true;
+                info = "Hug Unlocked! You can now press 'X' to hug, sometimes that's what someone negative needs!";
                 break;
             case 4:
                 dashUnlocked = true;
+                info = "Dash Unlocked! You can now press'Left Shift' to dash, staying active is good for the mind!";
                 break;
             case 5:
                 regenUnlocked = true;
+                info = "Regen Unlocked! You've banished the negativity, allowing your body to heal on its own!";
                 break;
         }
+        GameManager.gm.ToggleInfoMenu(info);
+    }
+
+    private void UpdateHealthBar(){
+        healthbar.fillAmount = health / maxHealth;
     }
 }
