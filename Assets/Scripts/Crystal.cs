@@ -10,6 +10,7 @@ public class Crystal : MonoBehaviour
         if (coll.transform.tag == "Hug" || coll.transform.tag == "Word"){
             //TODO: Death animation
             GameManager.gm.CrystalBroken(crystalNumber);
+            AudioPlayer.Instance.PlaySoundByName("Regenerate", null);
             Destroy(gameObject);
         }
     }

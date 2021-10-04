@@ -52,6 +52,17 @@ public class AudioPlayer : MonoBehaviour
 	// Awake is called when the script instance is being loaded
 	protected void Awake()
 	{
+		// Persist this audio player instance
+		if (Instance != null)
+		{
+			Destroy(gameObject);
+			return;
+		}
+		else
+		{
+			DontDestroyOnLoad(gameObject);
+		}
+
 		// Set the singleton instance
 		Instance = this;
 
@@ -76,12 +87,14 @@ public class AudioPlayer : MonoBehaviour
   protected void OnDisable()
   {
 		// Destroy the audio source for music
-		Destroy(musicSource.gameObject);
+		if (musicSource != null)
+		  Destroy(musicSource.gameObject);
 
 		musicSource = null;
 
 		// Destroy the audio source pool for sound effects
-		Destroy(soundSourcePool.gameObject);
+		if (soundSourcePool != null)
+		  Destroy(soundSourcePool.gameObject);
 
 		soundSourcePool = null;
 	}
@@ -322,4 +335,8 @@ public class AudioPlayer : MonoBehaviour
 		if (stopAfterFadeOut)
 			source.Stop();
 	}
+
+	// Play particular sounds
+	public void PlayConfirmSound() => PlaySoundByName("Confirm", null);
+	public void PlayCancelSound() => PlaySoundByName("Cancel", null);
 }
