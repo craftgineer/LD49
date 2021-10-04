@@ -112,20 +112,20 @@ public class CharacterController : MonoBehaviour
     void PlayerInput()
     {
         //MOVE
-        if(Input.GetKey(KeyCode.A)){
+        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)){
             rb.AddForce(Vector2.left * movementBase);
             updateFacing("left");
-        } else if(Input.GetKey(KeyCode.D)){
+        } else if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)){
             rb.AddForce(Vector2.right * movementBase);
             updateFacing("right");
         }
 
         //JUMP
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
+        if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded){
             rb.AddForce(Vector2.up * jumpBase);
 
             AudioPlayer.Instance.PlaySoundByName("Jump", null);
-        } else if(doubleJumpUnlocked && Input.GetKeyDown(KeyCode.Space) && !isGrounded && !hasDoubleJumped){
+        } else if(doubleJumpUnlocked && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && !isGrounded && !hasDoubleJumped){
             rb.AddForce(Vector2.up * jumpBase);
             hasDoubleJumped = true;
 
