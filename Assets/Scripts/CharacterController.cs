@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour
 {
@@ -39,6 +40,8 @@ public class CharacterController : MonoBehaviour
     public bool regenUnlocked;
     public bool dashUnlocked;
     public bool hugUnlocked;
+
+    public Image healthbar;
 
     public bool isDead;
     
@@ -86,6 +89,7 @@ public class CharacterController : MonoBehaviour
     public void Respawn(){
         transform.position = spawnPoint.position;
         health = maxHealth;
+        UpdateHealthBar();
         isDead = false;
     }
 
@@ -168,6 +172,7 @@ public class CharacterController : MonoBehaviour
     public void TakeDamage(int value){
         if(!isDead){
             health -= value;
+            UpdateHealthBar();
             if(health <= 0){
                 isDead = true;
                 GameManager.gm.ToggleDeadMenu();
@@ -195,6 +200,7 @@ public class CharacterController : MonoBehaviour
     public void Regenerate(){
         if(health < 100){
             health += 1 * Time.deltaTime;
+            UpdateHealthBar();
         }
     }
 
@@ -203,18 +209,23 @@ public class CharacterController : MonoBehaviour
         switch(npcNumber){
             case 1:
                 answer = wordUnlocked;
+                PlayerPrefs.SetInt("npc1_helped", 1);
                 break;
             case 2:
                 answer = doubleJumpUnlocked;
+                PlayerPrefs.SetInt("npc2_helped", 1);
                 break;
             case 3:
                 answer = hugUnlocked;
+                PlayerPrefs.SetInt("npc3_helped", 1);
                 break;
             case 4:
                 answer = dashUnlocked;
+                PlayerPrefs.SetInt("npc4_helped", 1);
                 break;
             case 5:
                 answer = regenUnlocked;
+                PlayerPrefs.SetInt("npc5_helped", 1);
                 break;
         }
         return answer;
@@ -245,5 +256,9 @@ public class CharacterController : MonoBehaviour
                 break;
         }
         GameManager.gm.ToggleInfoMenu(info);
+    }
+
+    private void UpdateHealthBar(){
+        healthbar.fillAmount = health / maxHealth;
     }
 }

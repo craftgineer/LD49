@@ -37,6 +37,12 @@ public class GameManager : MonoBehaviour
         InfoMenu.SetActive(false);
         BossDoorOpen.SetActive(false);
         StartMenu.SetActive(true);
+
+        PlayerPrefs.SetInt("npc1_helped", 0);
+        PlayerPrefs.SetInt("npc2_helped", 0);
+        PlayerPrefs.SetInt("npc3_helped", 0);
+        PlayerPrefs.SetInt("npc4_helped", 0);
+        PlayerPrefs.SetInt("npc5_helped", 0);
     }
 
     public void ToggleDeadMenu(){
