@@ -274,6 +274,7 @@ public class CharacterController : MonoBehaviour
                 break;
         }
         GameManager.gm.ToggleInfoMenu(info);
+        AudioPlayer.Instance.PlaySoundByName("Regenerate", null);
     }
 
     private void UpdateHealthBar(){

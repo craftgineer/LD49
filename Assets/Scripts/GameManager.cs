@@ -18,8 +18,6 @@ public class GameManager : MonoBehaviour
     public SpriteRenderer doorSR;
 
     private int unlockedCount;
-    private bool musicPhase2Triggered;
-    private bool musicPhase3Triggered;
 
     public GameObject DeadMenu;
     public GameObject InfoMenu;
@@ -31,8 +29,6 @@ public class GameManager : MonoBehaviour
     {
         gm = this;
         unlockedCount = 0;
-        musicPhase2Triggered = false;
-        musicPhase3Triggered = false;
         DeadMenu.SetActive(false);
         InfoMenu.SetActive(false);
         BossDoorOpen.SetActive(false);
@@ -98,15 +94,6 @@ public class GameManager : MonoBehaviour
         if(unlockedCount >= 5){
             UnlockBossDoor();
         }
-        if(!musicPhase2Triggered && unlockedCount == 1){
-            AudioPlayer.Instance.PlayMusicByName("Wandering/2", null);
-            musicPhase2Triggered = true;
-        }
-        if(!musicPhase3Triggered && unlockedCount == 3){
-            AudioPlayer.Instance.PlayMusicByName("Wandering/3", null);
-            musicPhase3Triggered = true;
-        }
-
     }
 
     void UnlockBossDoor(){
