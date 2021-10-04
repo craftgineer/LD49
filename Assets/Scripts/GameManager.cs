@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -12,13 +13,57 @@ public class GameManager : MonoBehaviour
     public Lock LockFour;
     public Lock LockFive;
 
+    public Sprite DoorSprite;
+    public GameObject BossDoorOpen;
+    public SpriteRenderer doorSR;
+
     private int unlockedCount;
+    private bool musicPhase2Triggered;
+    private bool musicPhase3Triggered;
+
+    public GameObject DeadMenu;
+    public GameObject InfoMenu;
+    public GameObject StartMenu;
+    public Text infoText;
 
     // Start is called before the first frame update
     void Start()
     {
         gm = this;
         unlockedCount = 0;
+        musicPhase2Triggered = false;
+        musicPhase3Triggered = false;
+        DeadMenu.SetActive(false);
+        InfoMenu.SetActive(false);
+        BossDoorOpen.SetActive(false);
+        StartMenu.SetActive(true);
+    }
+
+    public void ToggleDeadMenu(){
+        if(DeadMenu.activeSelf){
+            DeadMenu.SetActive(false);
+            CharacterController.player.Respawn();
+        } else{
+            DeadMenu.SetActive(true);
+        }
+        
+    }
+
+    public void ToggleInfoMenu(string info = ""){
+        if(InfoMenu.activeSelf){
+            InfoMenu.SetActive(false);
+        } else{
+            infoText.text = info;
+            InfoMenu.SetActive(true);
+        }
+    }
+
+    public void ToggleStartMenu(){
+        if(StartMenu.activeSelf){
+            StartMenu.SetActive(false);
+        } else{
+            StartMenu.SetActive(true);
+        }
     }
 
     public void CrystalBroken(int num){
@@ -47,9 +92,19 @@ public class GameManager : MonoBehaviour
         if(unlockedCount >= 5){
             UnlockBossDoor();
         }
+        if(!musicPhase2Triggered && unlockedCount == 1){
+            AudioPlayer.Instance.PlayMusicByName("Wandering/2", null);
+            musicPhase2Triggered = true;
+        }
+        if(!musicPhase3Triggered && unlockedCount == 3){
+            AudioPlayer.Instance.PlayMusicByName("Wandering/3", null);
+            musicPhase3Triggered = true;
+        }
+
     }
 
     void UnlockBossDoor(){
-        //TODO
+        BossDoorOpen.SetActive(true);
+        doorSR.sprite = DoorSprite;
     }
 }
