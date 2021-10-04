@@ -123,16 +123,24 @@ public class CharacterController : MonoBehaviour
         //JUMP
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
             rb.AddForce(Vector2.up * jumpBase);
+
+            AudioPlayer.Instance.PlaySoundByName("Jump", null);
         } else if(doubleJumpUnlocked && Input.GetKeyDown(KeyCode.Space) && !isGrounded && !hasDoubleJumped){
             rb.AddForce(Vector2.up * jumpBase);
             hasDoubleJumped = true;
+
+            AudioPlayer.Instance.PlaySoundByName("DoubleJump", null);
         }
 
         //ATTACK
         if(wordUnlocked && Input.GetKeyDown(KeyCode.Z) && !isAttacking){
             TriggerAnimation("word_attack");
+
+            AudioPlayer.Instance.PlaySoundByName("PrettyWords", null);
         } else if (hugUnlocked && Input.GetKeyDown(KeyCode.X) && !isAttacking){
             TriggerAnimation("hug_attack");
+
+            AudioPlayer.Instance.PlaySoundByName("Hugs", null);
         }
 
         if(dashUnlocked && Input.GetKeyDown(KeyCode.LeftShift)){
@@ -141,6 +149,8 @@ public class CharacterController : MonoBehaviour
             }else{
                 rb.AddForce(Vector2.left * dashForce);
             }
+
+            AudioPlayer.Instance.PlaySoundByName("Dash", null);
         }
 
         //ITEM
@@ -176,6 +186,9 @@ public class CharacterController : MonoBehaviour
             if(health <= 0){
                 isDead = true;
                 GameManager.gm.ToggleDeadMenu();
+                AudioPlayer.Instance.PlaySoundByName("Death", null);
+            } else{
+                AudioPlayer.Instance.PlaySoundByName("Hit", null);
             }
         }
         
@@ -186,6 +199,8 @@ public class CharacterController : MonoBehaviour
             item.transform.parent = this.transform;
             itemHeld = item;
             pickupTime = Time.time;
+
+            AudioPlayer.Instance.PlaySoundByName("Confirm", null);
         }
     }
 
@@ -194,6 +209,8 @@ public class CharacterController : MonoBehaviour
             itemHeld.transform.parent = null;
             itemHeld = null;
             pickupTime = Time.time;
+
+            AudioPlayer.Instance.PlaySoundByName("Cancel", null);
         }
     }
 
