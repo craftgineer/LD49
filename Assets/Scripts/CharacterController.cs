@@ -74,13 +74,14 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isDead){
-            GroundCheck();
-            PlayerInput();
-        }     
+            
     }
 
     void LateUpdate(){
+        if(!isDead){
+            GroundCheck();
+            PlayerInput();
+        } 
         if(regenUnlocked && !isDead){
             Regenerate();
         }
