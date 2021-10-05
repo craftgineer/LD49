@@ -186,6 +186,9 @@ public class CharacterController : MonoBehaviour
             UpdateHealthBar();
             if(health <= 0){
                 isDead = true;
+                if (itemHeld != null){
+                    DropItem();
+                }
                 GameManager.gm.ToggleDeadMenu();
                 AudioPlayer.Instance.PlaySoundByName("Death", null);
             } else{
