@@ -45,9 +45,13 @@ public class Enemy : MonoBehaviour
         if (weakToHug && coll.transform.tag == "Hug"){
             //TODO: Death animation
             Destroy(gameObject);
+
+            AudioPlayer.Instance.PlaySoundByName("Death", null);
         } else if(weakToWord && coll.transform.tag == "Word"){
             //TODO: Death animation
             Destroy(gameObject);
+
+            AudioPlayer.Instance.PlaySoundByName("Death", null);
         }
     }
 
