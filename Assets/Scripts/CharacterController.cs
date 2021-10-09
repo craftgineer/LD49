@@ -56,6 +56,7 @@ public class CharacterController : MonoBehaviour
         hugObject.SetActive(false);
         isGrounded = false;
         hasDoubleJumped = false;
+        isAttacking = false;
         isFacing = "right";
         curScale = gameObject.transform.localScale;
         rb = GetComponent<Rigidbody2D>();
@@ -90,6 +91,7 @@ public class CharacterController : MonoBehaviour
     public void Respawn(){
         transform.position = spawnPoint.position;
         health = maxHealth;
+        isAttacking = false;
         UpdateHealthBar();
         isDead = false;
     }
