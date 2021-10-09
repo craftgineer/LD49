@@ -232,23 +232,23 @@ public class CharacterController : MonoBehaviour
         switch(npcNumber){
             case 1:
                 answer = wordUnlocked;
-                PlayerPrefs.SetInt("npc1_helped", 1);
+                
                 break;
             case 2:
                 answer = doubleJumpUnlocked;
-                PlayerPrefs.SetInt("npc2_helped", 1);
+                
                 break;
             case 3:
                 answer = hugUnlocked;
-                PlayerPrefs.SetInt("npc3_helped", 1);
+                
                 break;
             case 4:
                 answer = dashUnlocked;
-                PlayerPrefs.SetInt("npc4_helped", 1);
+                
                 break;
             case 5:
                 answer = regenUnlocked;
-                PlayerPrefs.SetInt("npc5_helped", 1);
+                
                 break;
         }
         return answer;
@@ -259,22 +259,27 @@ public class CharacterController : MonoBehaviour
         switch(npcNumber){
             case 1:
                 wordUnlocked = true;
+                PlayerPrefs.SetInt("npc1_helped", 1);
                 info = "Nice Word Unlocked! You can now press 'Z' to say a positive word which may banish creatures of negativity!";
                 break;
             case 2:
                 doubleJumpUnlocked = true;
+                PlayerPrefs.SetInt("npc2_helped", 1);
                 info = "Double Jump Unlocked! Your new friend taught you how to jump an extra time in the air!";
                 break;
             case 3:
                 hugUnlocked = true;
+                PlayerPrefs.SetInt("npc3_helped", 1);
                 info = "Hug Unlocked! You can now press 'X' to hug, sometimes that's what someone negative needs!";
                 break;
             case 4:
                 dashUnlocked = true;
+                PlayerPrefs.SetInt("npc4_helped", 1);
                 info = "Dash Unlocked! You can now press'Left Shift' to dash, staying active is good for the mind!";
                 break;
             case 5:
                 regenUnlocked = true;
+                PlayerPrefs.SetInt("npc5_helped", 1);
                 info = "Regen Unlocked! You've banished the negativity, allowing your body to heal on its own!";
                 break;
         }

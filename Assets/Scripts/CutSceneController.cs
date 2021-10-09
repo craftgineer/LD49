@@ -90,7 +90,7 @@ public class CutSceneController : MonoBehaviour
 
     private void SetNPCStates(){
         for(int i = 0; i < 5; i++){
-            if(PlayerPrefs.GetInt("npc" + i + "_helped", 0) == 1){
+            if(PlayerPrefs.GetInt("npc" + (i +1).ToString() + "_helped", 0) == 1){
                 npcHeart[i].SetActive(true);
                 npcSmile[i].SetActive(true);
                 npcSad[i].SetActive(false);
